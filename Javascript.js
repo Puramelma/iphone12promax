@@ -29,7 +29,8 @@ const purchasedTickets = [68, 60, 961, 805, 996, 34, 208, 534, 708, 12, 96, 512,
                          815, 315, 507, 7, 6, 506, 521, 21, 31, 531, 694, 194, 283, 783, 928, 428, 228, 728, 20, 80, 520, 580, 281, 781, 875, 375, 
                          415, 915, 830, 330, 13, 513, 899, 399, 406, 906, 264, 764, 883, 383, 384, 884, 885, 886, 887, 385, 386, 387,
                          11, 511, 19, 32, 519, 532, 15, 515, 810, 310, 423, 429, 923, 929, 77, 577, 757, 257, 557, 57, 79, 118, 297, 411,
-                         579, 797, 911, 618, 343, 843, 478, 978, 377, 877, 46, 546, 142, 215, 642, 715, 254, 298, 754, 798]; // Tickets ya comprados (simulados)
+                         579, 797, 911, 618, 343, 843, 478, 978, 377, 877, 46, 546, 142, 215, 642, 715, 254, 298, 754, 798, 825, 800, 951,
+                         98, 37]; // Tickets ya comprados (simulados)
 
 const selectedTickets = []; // Tickets seleccionados por usuario
 
@@ -253,6 +254,7 @@ document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('paymentMethod').addEventListener('change', handlePaymentMethodChange);
 
 });
+
 
 
 
