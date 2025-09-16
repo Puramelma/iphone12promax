@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+
+</head>
+<body>
+      <!-- Background -->
+  <div class="background">
+  </div>
+
+    <!-- Welcome Modal -->
+  <div id="welcomeModal" class="modal-overlay">
+    <div class="welcome-card">
+      <div class="logo">
+        <img src="iphone.png" alt="Iphone 12 Logo">
+      </div>
+      <h1>IPHONE 12 PRO MAX</h1>
+      <p class="subtitle"></p>
+      <div class="welcome-info">
+        <p>Al finalizar su pedido presione el botón "Hacer Pedido" y corrobore que su orden sea enviada a nuestro WhatsApp.</p>
+      </div>
+      <button class="btn-start" onclick="startOrder()">Comenzar →</button>
+    </div>
+  </div>
+
+    <!-- Main Content -->
+  <div id="mainContent" style="display: none;">
+    <!-- Header -->
+    <header class="header">
+      <div class="container">
+        <div class="header-content">
+          <img src="iphone.png" alt="Iphone 12 Logo" class="header-logo">
+          <div class="header-info">
+            <h1>Oscar Chaparro</h1>
+            <div class="rating">
+              <div class="social-links">
+              <a href="https://www.facebook.com/oscar.chaparrocova"><img src="facebook.png" target="_blank" alt="Facebook"></a>
+              <a href="https://www.instagram.com/oscar_chaparro28/" target="_blank"><img src="Instagram.png" alt="Instagram"></a>
+              <a href="https://www.tiktok.com/@_oscarchaparro"><img src="tiktok.png" target="_blank" alt="TikTok"></a>
+              <a href="https://wa.link/n3xfs6"><img src="whatsapp.png" target="_blank" alt="WhatsApp"></a>
+            </div>
+          </div>  
+        </div>
+        <h2>IPHONE 12 PRO MAX</h2>
+        <p class="description">
+          <p>Jugador top con más tickets se lleva un calzado Air Force One</p>
+          <p>Premios especiales a través de nuestras historias en Instagram</p>
+          <p>Al alcanzar el 100% de la rifa se nombrará los ganadores a través de <strong>CHANCE A - 7:00pm</strong> </p>
+        </p>
+        <div class="location">
+          <p>Recuerda que con fé todo se logra! #PURAMELMA</p>
+          
+        </div>
+      </div>
+    </header>
+  </div>
+                <!-- Lista de tickets -->
+  <div class="menu-section">
+    <h2>Elige tus tickets</h2>
+      
+    <section class="tickets-section">
+      <div class="tickets-container"></div>
+        <!-- La información se mantiene visible siempre debajo -->
+    </section>
+
+          <!-- Div de información siempre visible -->
+    <div id="selection-info">
+       <!-- Información de selección aparecerá aquí -->
+    </div>
+  </div>
+
+
+
+
+
+                <!-- Order Form ======================================== -->
+  <section class="order-form-section" id="form">
+    <div class="order-form">
+      <h2>Completa los datos</h2>
+
+        <!-- Dentro de tu formulario, antes o después del botón, por ejemplo: -->
+      <div class="form-group">
+        <label for="selectedTickets">Tickets seleccionados:</label>
+        <textarea id="selectedTickets" rows="2" readonly></textarea>
+      </div>
+
+   
+
+      <div class="form-group">
+        <label for="name">Nombre y apellido: (*)</label>
+        <input type="text" id="name" placeholder="Ej: Elza Pato" required>
+      </div>
+
+      <div class="form-group">
+        <label for="cedula">Número de Cédula: (*)</label>
+        <input type="text" id="cedula" placeholder="C.I XXXXXX" required>
+      </div>
+
+    <div class="form-group">
+      <label for="phone">Número de teléfono: (*)</label>
+      <input type="tel" id="phone" placeholder="Ej: +58 424-XXX-XXXX" required>
+    </div>
+
+    <div class="form-group">
+      <label for="paymentMethod">¿Método de Pago? (*)</label>
+      <select class="metodos" id="paymentMethod" required>
+        <option value="">Seleccione...</option>
+        <option value="Pago Movil">Pago Movil</option>
+        <option value="Calzado">Calzado con @Inv_starshop</option>
+        <option value="Efectivo">Efectivo</option>
+        <option value="Binance">Binance</option>
+        <option value="Paypal">Paypal</option>
+        <option value="Zelle">Zelle</option>
+        
+      </select>
+      <!-- Contenedor para detalles bancarios -->
+<div id="bankDetailsContainer" style="margin-top:10px; display:none;">
+  <div id="pagoMovilDetails" class="bank-details" style="display:none;">
+    <h4>Pago Móvil</h4>
+    <p>Banco de Venezuela (0102)</p>
+    <p>04242708903</p>
+    <p>11055128</p>
+  </div>
+  <div id="calzadoDetails" class="bank-details" style="display:none;">
+    <h4>Si realizaste la compra de calzados con Inv Starshop</h4>
+    <p>En el campo de referencia  </p>
+    <p>Indica la cantidad de calzados que compraste.</p>
+    
+  </div>
+  <div id="efectivoDetails" class="bank-details" style="display:none;">
+    <h4>Pago en efectivo</h4>
+    <p>Por favor, diríjase a nuestra oficina para realizar el pago en efectivo.</p>
+  </div>
+  <div id="binanceDetails" class="bank-details" style="display:none;">
+    <h4>Binance</h4>
+    <p>Dirección de wallet: 0xe689992f7cbea63a22bbf86fb030ba427f5907e8</p>
+    <p>Binance Pay ID: XXXXXXXX</p>
+    <p>Correo electrónico: Jeinnermarin28@gmail.com</p>
+  </div>
+  <div id="paypalDetails" class="bank-details" style="display:none;">
+    <h4>PayPal</h4>
+    <p>Correo PayPal: jeinnermarin28@gmail.com</p>
+  </div>
+  <div id="zelleDetails" class="bank-details" style="display:none;">
+    <h4>Zelle</h4>
+    <p>Correo Zelle: Anicova805@gmail.com</p>
+  </div>
+</div>
+
+<!-- Campo para referencia -->
+<div class="form-group" style="margin-top:10px;">
+  <label for="paymentReference">Referencia (Número de código del pago):</label>
+  <input type="text" id="paymentReference" placeholder="Ref completa o últimos 4 dígitos" required>
+</div>
+
+    </div>
+
+
+    <button class="btn-order" target="_blank" onclick="placeOrder()">Realizar Pedido</button>
+    <p class="whatsapp-notice">Se requerirá de Whatsapp móvil o web para enviar su orden.</p>
+
+  </div>
+
+                        
+</section>
+
+
+
+<script src="Javascript.js"></script>
+</body>
+
+</html>
