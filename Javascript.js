@@ -46,7 +46,7 @@ const purchasedTickets = [
   77, 577, 757, 257, 254, 298, 754, 798,
   557, 57, 79, 118, 297, 411, 579, 797, 911, 618, 343, 843, 478, 978, 377, 877, 46, 546, 142, 215, 642, 715, 369, 869,
   357, 474, 687, 857, 102, 107, 106, 114, 124, 129, 134, 140, 146, 151, 150, 154, 158, 155, 266, 390, 952,
-  186, 182, 183, 178, 176
+  186, 182, 183, 178, 176, 280, 452, 425, 995, 992
 
 
 
@@ -274,6 +274,7 @@ document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('paymentMethod').addEventListener('change', handlePaymentMethodChange);
 
 });
+
 
 
 
