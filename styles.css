@@ -1,0 +1,443 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fuente principal y fondo general */
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: #fff;
+    background-color: #0d0d0d; /* Fondo oscuro para contraste */
+    overflow-x: hidden;
+}
+
+/* Fondo de imagen con overlay para efecto elegante */
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(Copilot_20250814_195934.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+.background::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5); /* oscurece imagen */
+}
+
+/* Contenedor principal */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Modal de bienvenida */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* Tarjeta bienvenida con efecto blur y sombra */
+.welcome-card {
+    background: rgba(255,255,255,0.1);
+    border: 2px solid rgba(255,255,255,0.2);
+    backdrop-filter: blur(10px);
+    padding: 40px;
+    border-radius: 20px;
+    max-width: 400px;
+    width: 90%;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    text-align: center;
+    color: #fff;
+    transition: all 0.3s ease;
+}
+.welcome-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.4);
+}
+
+/* Logo en bienvenida */
+.welcome-card .logo img {
+    width: 100%;
+    
+    border-radius: 15px;
+    margin-bottom: 20px;
+    border: 2px solid #ffffff49;
+}
+
+/* Título y subtítulo */
+.welcome-card h1 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #ffd700; /* Oro para elegancia */
+    margin-bottom: 10px;
+}
+.welcome-card .subtitle {
+    font-size: 14px;
+    color: #ddd;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+
+/* Información de bienvenida */
+.welcome-info {
+    text-align: left;
+    margin-bottom: 30px;
+    line-height: 1.8;
+    font-size: 14px;
+}
+.welcome-info p {
+    margin-bottom: 10px;
+    color: #eee;
+}
+.welcome-info strong {
+    font-weight: 600;
+}
+
+/* Botón de comenzar */
+.btn-start {
+    background: linear-gradient(135deg, #ff8c00, #ff4081);
+    color: #fff;
+    border: none;
+    padding: 15px 40px;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(255, 140, 66, 0.3);
+    transition: all 0.3s ease;
+    margin-top: 10px;
+}
+.btn-start:hover {
+    background: linear-gradient(135deg, #e67c32, #ff3b81);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 140, 66, 0.4);
+}
+
+/* Encabezado principal */
+.header {
+    background: rgba(255,255,255,0.05);
+    padding: 30px 20px;
+    margin: 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    backdrop-filter: blur(8px);
+}
+.header .header-content {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.header-logo {
+    width: 150px;
+    height: 150px;
+    border-radius: 15px;
+    border: 2px solid #fff;
+    margin-right: 20px;
+    object-fit: cover;
+}
+.header-info h1 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #c5c1b0;
+    margin-bottom: 5px;
+}
+
+.header h2 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #ffd700;
+    margin: 15px 0;
+    text-align: center;
+}
+.description {
+    font-size: 16px;
+    color: #ddd;
+    margin-bottom: 20px;
+    line-height: 1.6;
+    text-align: center;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.location {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+.location p {
+    font-size: 14px;
+    color: #ccc;
+    margin-bottom: 10px;
+}
+.social-links {
+    display: flex;
+    gap: 15px;
+}
+.social-links a img {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s ease;
+}
+.social-links a:hover img {
+    transform: scale(1.2);
+}
+
+/* Sección lista de tickets */
+.menu-section {
+    background: rgba(255,255,255,0.05);
+    padding: 30px 20px;
+    margin: 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    overflow-x: auto;
+}
+.menu-section h2 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.menu-section p {
+    font-size: 16px;
+    color: #ccc;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.tickets-section {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+.tickets-container {
+    height: 370px;
+    width: 350px;
+    overflow-y: scroll;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 5px;
+
+    padding: 0px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+  }
+.ticket {
+    background: #fd1d1d;
+  color: #fff;
+
+
+    padding: 12px;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    
+}
+.ticket:hover {
+    background: #555;
+}
+.ticket.selected {
+    background: linear-gradient(135deg,
+    #ffffff 0%,          /* Negro profundo estilo Apple */
+    #ffffff 25%,         /* Púrpura Instagram */
+    #ffffff 50%,         /* Rojo vibrante Instagram */
+    #ffffff 75%,         /* Naranja Instagram */
+    #ffffff 100%         /* Vuelve al negro para cerrar el loop */
+  );
+  background-attachment: fixed;
+  
+  animation: gradientShift 10s ease infinite;
+  color: #000000;
+}
+.ticket.reserved {
+    background: #44444400;
+    color: #ffffff00;
+    cursor: not-allowed;
+}
+
+/* Información siempre visible */
+#selection-info {
+    margin: 20px auto; /* Centrado horizontal + margen superior */
+    padding: 15px;
+    border: 2px solid #ffffff;
+    border-radius: 10px;
+    background: rgb(0, 0, 0);
+    max-width: 600px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #eee;
+    text-align: center;
+}
+
+
+#selection-info button{
+    background: linear-gradient(135deg,
+     #0d0d0d 0%,          /* Negro profundo estilo Apple */
+     #14095d 25%,         /* Púrpura Instagram */
+     #fd1d1d 50%,         /* Rojo vibrante Instagram */
+     #fcb045 75%,         /* Naranja Instagram */
+     #0d0d0d 100%         /* Vuelve al negro para cerrar el loop */
+    );
+    background-attachment: fixed;
+    
+    animation: gradientShift 10s ease infinite;
+    color: #a92222;
+    width: 150px;
+    padding: 10px;
+    margin: 20px;
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 700;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(255, 140, 66, 0.3);
+    transition: all 0.3s ease;
+}
+
+#selection-info button:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 20px rgba(255, 140, 66, 0.4);
+}
+
+
+
+
+
+
+
+
+/* Formulario de pedido */
+/* Formulario de pedido */
+.order-form-section {
+    display: flex;
+    justify-content: center;   /* Centrado horizontal */
+    align-items: center;       /* Centrado vertical */
+    min-height: 100vh;         /* Ocupa toda la altura de la ventana */
+    padding: 60px 20px;
+    background: transparent;
+
+    /* 🔥 FIX para asegurarse que el contenedor padre lo centre */
+    width: 100%;
+    margin: 0 auto;
+}
+
+.order-form {
+    max-width: 700px;
+    width: 100%;
+    padding: 40px;
+    border: 2px solid rgba(255,255,255,0.2);
+    border-radius: 20px;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 0 40px rgba(0,0,0,0.3);
+    background: linear-gradient(135deg, rgba(0,0,0,0.3), rgba(0,0,0,0.1));
+    color: #fff;
+
+    /* 🔥 Extra seguridad: centrado si está dentro de un contenedor */
+    margin: 0 auto;
+}
+
+.order-form h2 {
+    font-size: 2.2rem;
+    margin-bottom: 30px;
+    text-align: center;
+    font-weight: 700;
+    color: #fffffd;
+    text-shadow: 0 0 8px rgba(255,255,255,0.3);
+}
+.form-group {
+    margin-bottom: 20px;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #ffffff;
+}
+.form-group option{
+    color: #000;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: none;
+    border-radius: 10px;
+    background-color: rgba(255,255,255,0.1);
+    color: #fff;
+    font-size: 1rem;
+    outline: none;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+input::placeholder {
+    color: #ccc;
+}
+input:focus,
+select:focus,
+textarea:focus {
+    background-color: rgba(255,255,255,0.2);
+    box-shadow: 0 0 8px #ffd700;
+}
+.bank-details h4 {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    color: #8e8e8e;
+}
+.bank-details p {
+    margin: 5px 0;
+    color: #ddd;
+}
+.btn-order {
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(135deg, #14095d, #fd1d51 );
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 700;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(255, 140, 66, 0.3);
+    transition: all 0.3s ease;
+}
+.btn-order:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 20px rgba(255, 140, 66, 0.4);
+}
+.whatsapp-notice {
+    margin-top: 15px;
+    font-size: 0.9rem;
+    color: #ccc;
+    text-align: center;
+}
