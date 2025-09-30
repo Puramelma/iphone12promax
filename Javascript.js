@@ -49,7 +49,7 @@ const purchasedTickets = [123, 135, 200, 199, 305, 492, 789, 660, 631, 624, 629,
   213, 223, 196, 172, 226, 201, 231, 270, 282, 290, 262, 267, 303, 174, 204, 214, 217, 218, 219, 227, 234, 236, 241, 242, 243, 268, 
   156, 273, 274, 275, 292, 293, 294, 295, 296, 312, 314, 318, 326, 325, 327, 319, 880, 
   160, 162, 165, 166, 169, 193, 185, 179, 173, 171, 206, 229, 230, 232, 233, 258, 256, 253, 251, 249, 259, 261, 265, 276, 279, 289, 288, 287, 286, 285,
-  367, 337
+  367, 337, 291, 363
                           
 
 ]; // Tickets ya comprados (simulados)
@@ -58,7 +58,7 @@ const selectedTickets = []; // Tickets seleccionados por usuario
 
 // Constantes de precios
 const PRICE_USD = 1;
-const PRICE_VES = 200;
+const PRICE_VES = 100;
 
 // =======================
 // Funciones de utilidad
@@ -285,6 +285,7 @@ document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('paymentMethod').addEventListener('change', handlePaymentMethodChange);
 
 });
+
 
 
 
