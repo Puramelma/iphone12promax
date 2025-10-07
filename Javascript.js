@@ -59,7 +59,7 @@ const selectedTickets = []; // Tickets seleccionados por usuario
 
 // Constantes de precios
 const PRICE_USD = 1;
-const PRICE_VES = 200;
+const PRICE_VES = 250;
 
 // =======================
 // Funciones de utilidad
@@ -286,6 +286,7 @@ document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('paymentMethod').addEventListener('change', handlePaymentMethodChange);
 
 });
+
 
 
 
