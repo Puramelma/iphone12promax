@@ -53,7 +53,7 @@ const purchasedTickets = [123, 135, 200, 199, 305, 492, 789, 660, 631, 624, 629,
   922, 341, 344, 939, 499, 496, 489, 487, 553, 562, 561, 340, 364, 366, 405, 407, 421, 829, 663, 834, 422, 822, 803,
   359, 361, 365, 374, 373, 371, 368, 378, 358, 370, 398, 403, 409, 410, 412, 413, 417, 427, 418, 430, 426, 419, 432, 420, 434,
   389, 962, 712, 674, 676, 466, 932, 671, 864, 960, 593, 671, 864, 994, 593, 301, 396, 491, 696, 854, 791, 646, 960, 812, 567,
-  479, 645, 392, 436
+  479, 645, 392, 436, 336, 355, 323, 697, 380, 449
 ]; // Tickets ya comprados (simulados)
 
 const selectedTickets = []; // Tickets seleccionados por usuario
@@ -287,6 +287,7 @@ document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('paymentMethod').addEventListener('change', handlePaymentMethodChange);
 
 });
+
 
 
 
