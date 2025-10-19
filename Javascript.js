@@ -76,8 +76,6 @@ function updateSelectionDisplay() {
   if (selectedTickets.length === 0) {
     infoDiv.innerHTML = `
       <p>Tickets seleccionados: 0</p>
-      <p>Valor de ticket $1</p>
-      <p>Total en USD: $0</p>
       <p>Total en VES: 0 Bs.</p>
       <button disabled>COMPRAR</button>
     `;
@@ -288,6 +286,7 @@ document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('paymentMethod').addEventListener('change', handlePaymentMethodChange);
 
 });
+
 
 
 
